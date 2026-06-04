@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    background: black;
+    color: #00ff66;
+    font-family: Consolas, monospace;
+    overflow: hidden;
+}
+
+/* BOOT SCREEN */
+
+#boot {
+    position: absolute;
+    inset: 0;
+    background: black;
+    padding: 20px;
+    animation: flicker 0.25s infinite alternate;
+}
+
+@keyframes flicker {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.85;
+    }
+}
+
+/* DESKTOP */
+
+#desktop {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    overflow: hidden;
+}
+
+/* TOP BAR */
+
+#topbar {
+    height: 40px;
+    background: #002200;
+    border-bottom: 1px solid #00ff66;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 10px;
+}
+
+/* DESKTOP ICONS */
+
+.desktop-icon {
+    margin: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* WINDOWS */
+
+.window {
+    position: absolute;
+    width: 320px;
+    height: 220px;
+    left: 50px;
+    top: 50px;
+
+    background: #001100;
+    border: 1px solid #00ff66;
+
+    box-shadow: 0 0 10px rgba(0,255,102,0.3);
+}
+
+.titlebar {
+    background: #003300;
+    color: #00ff66;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 4px 6px;
+    cursor: move;
+    user-select: none;
+}
+
+.content {
+    padding: 8px;
+    height: calc(100% - 32px);
+    overflow: auto;
+}
+
+/* BUTTONS */
+
+button {
+    background: black;
+    color: #00ff66;
+    border: 1px solid #00ff66;
+    cursor: pointer;
+    margin: 2px;
+}
+
+button:hover {
+    background: #003300;
+}
+
+/* INPUTS */
+
+input,
+textarea {
+    background: black;
+    color: #00ff66;
+    border: 1px solid #00ff66;
+    font-family: Consolas, monospace;
+}
+
+textarea {
+    width: 95%;
+    height: 140px;
+}
+
+/* FILE LIST */
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+/* SCROLLBARS */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #001100;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00aa44;
+}
